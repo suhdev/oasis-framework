@@ -1,0 +1,6 @@
+127.0.0.1 - - [10/Dec/2015:23:02:03 +0000] "GET / HTTP/1.1" 200 1929 "-" "curl/7.37.1"
+127.0.0.1 - - [10/Dec/2015:23:02:03 +0000] "GET / HTTP/1.1" 200 1929 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"
+127.0.0.1 - - [10/Dec/2015:23:02:03 +0000] "GET /icons/script.gif HTTP/1.1" 200 242 "http://oasis-framework/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"
+127.0.0.1 - - [10/Dec/2015:23:02:04 +0000] "GET /icons/dir.gif HTTP/1.1" 200 225 "http://oasis-framework/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"
+127.0.0.1 - - [10/Dec/2015:23:02:05 +0000] "GET /icons/forward.gif HTTP/1.1" 200 219 "http://oasis-framework/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"
+127.0.0.1 - - [10/Dec/2015:23:02:05 +0000] "GET /favicon.ico HTTP/1.1" 404 209 "http://oasis-framework/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_90_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36"
