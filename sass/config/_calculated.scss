@@ -1,0 +1,2 @@
+$document-direction:ltr !default;
+$direction:if($document-direction == ltr,left,right);

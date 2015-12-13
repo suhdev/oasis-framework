@@ -1,0 +1,66 @@
+$base-font-size:16px;
+$base-font-family:sans-serif;
+$base-font-rtl:'Droid Arabic Kufi', sans-serif;
+$base-font-ltr:$base-font-family;
+$base-color-primary:#225599;
+$base-color-danger:#FF5522;
+$base-color-success:#44CC66;
+$base-color-info:#FF9933;
+$base-control-font-size:$base-font-size;
+$base-font-size-xs:8px;
+$base-font-size-sm:10px;
+$base-font-size-md:$base-font-size;
+$base-font-size-lg:18px;
+$base-control-height:2.6em; 
+$base-control-padding:0px 0.6em;
+$base-document-direction:ltr;
+$control-types:primary danger success info; 
+$control-colors:$base-color-primary $base-color-danger $base-color-success $base-color-info;
+$control-size-types:xs sm md lg;
+$control-sizes:$base-font-size-xs $base-font-size-sm $base-font-size-md $base-font-size-lg;
+$screen-size-types:xs sm md lg;
+$screen-size-xsmall:560px;
+$screen-size-small:700px;
+$screen-size-medium:980px;
+$screen-size-large:1100px;
+$screen-sizes:$screen-size-xsmall $screen-size-small $screen-size-medium $screen-size-large;
+
+%box{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+%no-text-select{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+%full-line,.full-line{
+	display:block;
+	width:100%;
+}
+
+%clearfix,.clearfix{
+	&:after,&:before{
+		content:' ';
+		display:table;
+		clear:both;
+	}
+}
+html,body{
+	font-family:$base-font-ltr;
+	direction:ltr;
+	margin:0px;
+	padding:0px;
+	&.ltr,.ltr{
+		font-family:$base-font-ltr;
+	}
+	&.rtl,.rtl{
+		font-family:$base-font-rtl;
+		direction:rtl;
+	}
+}

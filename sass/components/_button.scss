@@ -1,0 +1,61 @@
+$button-default-font-size:$base-font-size !default;
+$button-default-font-family:$base-font-family !default; 
+$button-default-padding:$base-control-padding !default;
+$button-default-height:$base-control-height !default;
+$button-default-bg:$base-color-primary;
+$button-default-fg:white;
+
+%button{
+	@extend %box;
+	@extend %no-text-select;
+	cursor:pointer;
+	direction:inherit;
+	display:inline-block;
+	font-family:inherit;
+}
+
+.of-btn{
+	@extend %button;
+	font-size:$button-default-font-size;
+	// font-family:$button-default-font-family;
+	height:$button-default-height;
+	line-height:$button-default-height;
+	padding:$button-default-padding;
+	background:$button-default-bg;
+	color:$button-default-fg;
+	-webkit-transition: all 0.5s cubic-bezier(0,0,0,1);
+	-o-transition: all 0.5s cubic-bezier(0,0,0,1);
+	transition: all 0.5s cubic-bezier(0,0,0,1);
+
+	&:hover{
+		background:lighten($button-default-bg,15%);
+	}
+
+	&:active,&.active{
+		background:darken($button-default-bg,10%);	
+	}
+
+
+	@each $type in $control-types {
+		$idx:index($control-types, $type);
+		&.#{$type} {
+			background:nth($control-colors, $idx);
+
+			&:hover{
+				background:lighten(nth($control-colors, $idx),15%);
+			}
+
+			&:active,&.active{
+				background:darken(nth($control-colors, $idx),10%);
+			}
+		}
+	}
+
+	@each $type in $control-size-types {
+		$idx:index($control-size-types, $type);
+		&.#{$type}{
+			font-size:nth($control-sizes, $idx);
+		}
+	}
+
+}

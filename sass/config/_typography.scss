@@ -1,0 +1,21 @@
+$text-transforms:uppercase lowercase capitalize;
+$text-aligns:left right center justify;
+$text-decorations:line-through overline underline;
+
+@each $transform in $text-transforms {
+	.text-#{$transform} {
+		text-transform:$transform;
+	}
+}
+
+@each $align in $text-aligns {
+	.text-#{$align}{
+		text-align:$align;
+	}
+}
+
+@each $d in $text-decorations {
+	.text-#{$d}{
+		text-decoration:$d;
+	}
+}

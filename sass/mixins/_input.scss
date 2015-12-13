@@ -1,0 +1,20 @@
+%input{
+	@extend %box;
+}
+
+$text-field-default-bg:
+$text-field-default-fg:
+$text-field-default-height:
+$text-field-default-line-height:
+$text-field-default-padding:0px 5px;
+
+@mixin InputField($selector:shui-textfield,
+	$bg:$text-field-default-bg,
+	$fg:$text-field-default-fg,
+	$height:$text-field-default-height,
+	$line-height:$text-field-default-line-height,
+	$padding:$text-field-default-padding){
+	.#{$selector}{
+	// font-family:$
+	}
+}

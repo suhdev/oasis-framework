@@ -1,0 +1,42 @@
+$directions:ltr rtl;
+$visibility:visible hidden collapse;
+
+@each $direction in $directions {
+	.dir-#{$direction}{
+		direction:$direction;
+	}
+}
+
+@each $v in $visibility {
+	.visibility-#{$v}{
+		visibility:$v;
+	}
+}
+
+$button-default-font-family:sans-serif !default;
+%box,.box{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+%button,.button{
+	@extend %box;
+	display:inline-block;
+	font-family:$button-default-font-family;
+}
+
+
+%clearfix{
+	content:' ';
+	display:table-cell;
+	clear:both;
+}
+
+.clearfix{
+	&:after,&:before{
+		content:' ';
+		display:table-cell;
+		clear:both;
+	}
+}

@@ -1,0 +1,65 @@
+%button {
+	@extend %box;
+	@extend %no-text-select;
+	cursor:pointer;
+	display:inline-block;
+
+}
+$button-default-bg:#4569CC !default;
+$button-default-fg:white !default;
+$button-default-padding:0px 10px !default;
+$button-default-font-family:sans-serif !default;
+$button-default-font-size:1.2rem; 
+$button-default-line-height:44px;
+$button-default-height:44px;
+$button-default-border-radius:3px;
+@mixin Button($selector,
+	$bg:$button-default-bg,
+	$fg:$button-default-fg,
+	$padding:$button-default-padding,
+	$font-family:$button-default-font-family,
+	$font-size:$button-default-font-size,
+	$height:$button-default-height,
+	$line-height:$button-default-line-height,
+	$border-radius:$button-default-border-radius,
+	$with-states:true
+	) {
+	.#{$selector}{
+		@extend %button;
+		@extend %box;
+		display:inline-block;
+		padding:$padding;
+		background:$bg;
+		color:$fg;
+		font-family:$font-family; 
+		font-size:$font-size;
+		line-height:$line-height;
+
+		@if $with-states {
+			@include State($state:hover,
+				$bg:lighten($bg,10%),
+				$fg:$fg);
+			@include State($state:active,
+				$bg:darken($bg,10%),
+				$fg:$fg);
+		}
+
+		@content;
+	}
+}
+
+@mixin State($state,
+	$bg,
+	$fg){
+	@if & {
+		&.#{$selector},&:#{$state}{
+			background:$bg;
+			color:$fg;
+		}
+	}else {
+		button.#{$selector},button:#{$state}{
+			background:$bg;
+			color:$fg;
+		}
+	}
+}

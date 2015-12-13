@@ -1,0 +1,11 @@
+$direction:left !default;
+
+@mixin CenterHorizontally($width,$dir:$direction) {
+	#{$dir}:50%;
+	margin-#{$dir}:-($width/2);
+}
+
+@mixin CenterVertically($height){
+	top:50%;
+	margin-top:-($height/2);
+}

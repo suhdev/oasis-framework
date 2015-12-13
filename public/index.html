@@ -1,53 +1,211 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Welcome to oasis-framework</title>
-<style type="text/css">
- body, div, td { font-family: "Lucida Grande"; font-size: 12px; color: #666666; }
- b { color: #333333; }
- .indent { margin-left: 10px; }
-</style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Oasis Framework</title>
+  <link rel="stylesheet" href="/css/screen.css" />
+  <style>
+  .page-section{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:50%;
+    padding:10px;
+    float:left;
+  }
+  .section{
+    margin:0px 0px;
+    padding:10px;
+  }
+
+  .clearfix:after,.clearfix:before{
+    content:' ';
+    display:table-cell;
+  }
+  </style>
 </head>
-<body link="#993300" vlink="#771100" alink="#ff6600">
+<body>
+<div class="clearfix">
+  <div class="page-section">
+    <h1>Buttons</h1>
+    <div class="section">
+      <div class="of-btn lg">Button Default</div>
+      <div class="of-btn lg danger">Button Danger</div>
+      <div class="of-btn lg success">Button Success</div>
+      <div class="of-btn lg info">Button Info</div>
+    </div>
 
-<table border="0" width="100%" height="95%"><tr><td align="center" valign="middle">
-<div style="width: 500px; background-color: #eeeeee; border: 1px dotted #cccccc; padding: 20px; padding-top: 15px;">
- <div align="center" style="font-size: 14px; font-weight: bold;">
-  Congratulations!
- </div>
+    <div class="section">
+      <div class="of-btn">Button Default</div>
+      <div class="of-btn danger">Button Danger</div>
+      <div class="of-btn success">Button Success</div>
+      <div class="of-btn info">Button Info</div>
+    </div>
 
- <div align="left">
-  <p>If you are reading this in your web browser, then the only logical conclusion is that the <b><a href="http://oasis-framework:80/">http://oasis-framework:80/</a></b> virtualhost was set up correctly. :)</p>
+    <div class="section">
+      <div class="of-btn sm">Button Default</div>
+      <div class="of-btn sm danger">Button Danger</div>
+      <div class="of-btn sm success">Button Success</div>
+      <div class="of-btn sm info">Button Info</div>
+    </div>
 
-  <p>You can find the configuration file for this virtual host in:<br>
-  <table class="indent" border="0" cellspacing="3">
-   <tr>
-    <td><img src="/icons/script.gif" width="20" height="22" border="0"></td>
-    <td><b>/private/etc/apache2/virtualhosts/oasis-framework</b></td>
-   </tr>
-  </table>
-  </p>
+    <div class="section">
+      <div class="of-btn xs">Button Default</div>
+      <div class="of-btn xs danger">Button Danger</div>
+      <div class="of-btn xs success">Button Success</div>
+      <div class="of-btn xs info">Button Info</div>
+    </div>
 
-  <p>You will need to place all of your website files in:<br>
-  <table class="indent" border="0" cellspacing="3">
-   <tr>
-    <td><img src="/icons/dir.gif" width="20" height="22" border="0"></td>
-    <td><b><a href="file:///Users/suhail/Sites/oasis-framework/public">/Users/suhail/Sites/oasis-framework/public</b></a></td>
-   </tr>
-  </table>
-  </p>
+    <h1>Input Fields</h1>
 
-  <p>For the latest version of this script, tips, comments, <span style="font-size: 10px; color: #999999;">donations,</span> etc. visit:<br>
-  <table class="indent" border="0" cellspacing="3">
-   <tr>
-    <td><img src="/icons/forward.gif" width="20" height="22" border="0"></td>
-    <td><b><a href="http://patrickg.com/virtualhost">http://patrickg.com/virtualhost</a></b></td>
-   </tr>
-  </table>
-  </p>
- </div>
+    <div class="section">
+      <input type="text" class="of-text-field lg" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field danger lg" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field success lg" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field info lg" />
+    </div>
 
+    <div class="section">
+      <input type="text" class="of-text-field" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field danger" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field success" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field info" />
+    </div>
+
+    <div class="section">
+      <input type="text" class="of-text-field sm" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field danger sm" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field success sm" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field info sm" />
+    </div>
+
+    <div class="section">
+      <input type="text" class="of-text-field xs" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field danger xs" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field success xs" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field info xs" />
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10">Suhail</div>
+        <div class="col-sm-5">Great</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10">Suhail</div>
+        <div class="col-sm-5">Great</div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class="page-section rtl">
+  <h1>أزرار</h1>
+    <div class="section">
+      <div class="of-btn lg">زر عادي</div>
+      <div class="of-btn lg danger">زر خطر</div>
+      <div class="of-btn lg success">زر تحقيق</div>
+      <div class="of-btn lg info">زر معلومات</div>
+    </div>
+
+    <div class="section">
+      <div class="of-btn">زر عادي</div>
+      <div class="of-btn danger">زر خطر</div>
+      <div class="of-btn success">زر تحقيق</div>
+      <div class="of-btn info">زر معلومات</div>
+    </div>
+    <div class="section">
+      <div class="of-btn sm">زر عادي</div>
+      <div class="of-btn sm danger">زر خطر</div>
+      <div class="of-btn sm success">زر تحقيق</div>
+      <div class="of-btn sm info">زر معلومات</div>
+    </div>
+    <div class="section">
+      <div class="of-btn xs">زر عادي</div>
+      <div class="of-btn xs danger">زر خطر</div>
+      <div class="of-btn xs success">زر تحقيق</div>
+      <div class="of-btn xs info">زر معلومات</div>
+    </div>
+    <h1>متحكمات ادخال بيانات</h1>
+
+    <div class="section">
+      <input type="text" class="of-text-field lg" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field danger lg" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field success lg" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field info lg" />
+    </div>
+
+    <div class="section">
+      <input type="text" class="of-text-field" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field danger" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field success" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field info" />
+    </div>
+
+    <div class="section">
+      <input type="text" class="of-text-field sm" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field danger sm" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field success sm" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field info sm" />
+    </div>
+
+    <div class="section">
+      <input type="text" class="of-text-field xs" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field danger xs" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field success xs" />
+    </div>
+    <div class="section">
+      <input type="text" class="of-text-field info xs" />
+    </div>
+  </div>
 </div>
-</td></tr></table>
-
 </body>
 </html>
