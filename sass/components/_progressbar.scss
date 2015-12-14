@@ -1,0 +1,15 @@
+.of-progressbar{
+	@extend %box;
+	position:relative;
+	height:1em;
+	width:100%;
+
+	.of-inner-wrapper{
+		@extend %box;
+		position:absolute;
+		left:0px;
+		top:0px;
+		height:100%;
+		width:0px;
+	}
+}

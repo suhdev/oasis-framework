@@ -1,0 +1,97 @@
+$switch-base-bg:$base-color-primary !default;
+$switch-knob-bg:white !default;
+$switch-default-height:2.5em;
+$switch-padding:2px;
+.of-switch{
+	@extend %box;
+	position:relative;
+	display:inline-block;
+	cursor:pointer;
+	padding:$switch-padding;
+	background-color: $switch-base-bg;
+	font-size:$base-font-size;
+	-webkit-border-radius: 2 * $switch-default-height;
+	-moz-border-radius: 2 * $switch-default-height;
+	-ms-border-radius: 2 * $switch-default-height;
+	-o-border-radius: 2 * $switch-default-height;
+	border-radius: 2 * $switch-default-height;
+	.of-wrapper{
+		@extend %box;
+		position:relative;
+		height:$switch-default-height;
+		width:0.5 * $switch-default-height;
+	}
+
+	.of-knob{
+		@extend %box;
+		position:absolute;
+		top:0px;
+		left:0px;
+		width:100%;
+		height:50%;
+		background-color: $switch-knob-bg;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		-webkit-transition: top 0.5s cubic-bezier(0,0,0,1);
+		-o-transition: top 0.5s cubic-bezier(0,0,0,1);
+		transition: top 0.5s cubic-bezier(0,0,0,1);
+	}
+
+	&.active,&:active{
+		.of-knob{
+			top:50%;
+		}
+	}
+
+	&.active:active{
+		.of-knob{
+			top:0px;
+		}
+	}
+
+	@each $type in $control-size-types {
+		$idx:index($control-size-types,$type);
+		&.#{$type} {
+			font-size:nth($control-sizes,$idx);
+		}
+	}
+
+	@each $type in $control-types {
+		$idx:index($control-types,$type);
+		&.#{$type} {
+			background-color: nth($control-colors,$idx);
+		}
+	}
+
+	&.horizontal{
+		.of-wrapper{
+			height:0.5 * $switch-default-height;
+			width:$switch-default-height;
+		}
+
+		.of-knob{
+			width:50%;
+			height:100%;
+			-webkit-transition: left 0.5s cubic-bezier(0,0,0,1);
+			-o-transition: left 0.5s cubic-bezier(0,0,0,1);
+			transition: left 0.5s cubic-bezier(0,0,0,1);
+		}
+
+		&.active,&:active{
+			.of-knob{
+				top:0px;
+				left:50%;
+			}
+		}
+
+		&.active:active{
+			.of-knob{
+				top:0px;
+				left:0px;
+			}
+		}
+	}
+}
