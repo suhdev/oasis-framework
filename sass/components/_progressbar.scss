@@ -1,15 +1,68 @@
+$progressbar-default-height:1em !default;
+$progressbar-label-width:50px;
 .of-progressbar{
 	@extend %box;
+	@extend %no-text-select;
 	position:relative;
-	height:1em;
+	height:$progressbar-default-height;
 	width:100%;
+	-webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-webkit-border-radius: $progressbar-default-height/2;
+	-moz-border-radius: $progressbar-default-height/2;
+	-ms-border-radius: $progressbar-default-height/2;
+	-o-border-radius: $progressbar-default-height/2;
+	border-radius: $progressbar-default-height/2;
 
 	.of-inner-wrapper{
 		@extend %box;
 		position:absolute;
+		background-color: $base-color-primary;
+		-webkit-border-radius: $progressbar-default-height/2 0px 0px $progressbar-default-height/2;
+		-moz-border-radius: $progressbar-default-height/2 0px 0px $progressbar-default-height/2;
+		-ms-border-radius: $progressbar-default-height/2 0px 0px $progressbar-default-height/2;
+		-o-border-radius: $progressbar-default-height/2 0px 0px $progressbar-default-height/2;
+		border-radius: $progressbar-default-height/2 0px 0px $progressbar-default-height/2;
 		left:0px;
 		top:0px;
 		height:100%;
 		width:0px;
+	}
+
+	.of-progress-label{
+		@extend %box;
+		position:absolute;
+		left:100%;
+		margin-left:-($progressbar-label-width);
+		top:0px;
+		height:100%;
+		// font-size:0.8em;
+		line-height:100%;
+		color:white;
+		text-align:center;
+		width:$progressbar-label-width;
+		color:darken(white,5%);
+		text-align:right;
+		padding-right:2px;
+	}
+
+	.of-progress-label > *{
+		line-height:inherit;
+		display:block;
+		font-size:0.6em;
+	}
+
+	@each $type in $control-size-types {
+		$idx:index($control-size-types,$type);
+		&.#{$type} {
+			font-size:nth($control-sizes,$idx)*1.4;
+		}
+	}
+
+	@each $type in $control-types {
+		$idx:index($control-types,$type);
+		&.#{$type} .of-inner-wrapper {
+			background-color: nth($control-colors,$idx);
+		}
 	}
 }
