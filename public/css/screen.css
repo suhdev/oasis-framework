@@ -3,6 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@import url(https://fonts.googleapis.com/css?family=Lateef&subset=arabic,latin);
 /* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -68,15 +69,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 28, ../../sass/components/_common.scss */
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24, .column, .container, .container-full, .of-btn, .of-text-field, .of-switch, .of-switch .of-wrapper, .of-switch .of-knob, .of-progressbar, .of-progressbar .of-inner-wrapper, .of-progressbar .of-progress-label {
+/* line 29, ../../sass/components/_common.scss */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24, .column, .container, .container-full, .of-btn, .of-text-field, .of-switch, .of-switch .of-wrapper, .of-switch .of-knob, .of-progressbar, .of-progressbar .of-inner-wrapper, .of-progressbar .of-progress-label, .of-dropdown, .of-dropdown .of-label, .of-dropdown .of-menu, .of-dropdown .of-menu-item {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 34, ../../sass/components/_common.scss */
-.of-btn, .of-progressbar {
+/* line 35, ../../sass/components/_common.scss */
+.of-btn, .of-progressbar, .of-dropdown {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -84,33 +85,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   user-select: none;
 }
 
-/* line 42, ../../sass/components/_common.scss */
+/* line 43, ../../sass/components/_common.scss */
 .full-line {
   display: block;
   width: 100%;
 }
 
-/* line 48, ../../sass/components/_common.scss */
+/* line 49, ../../sass/components/_common.scss */
 .row:after, .row:before, .clearfix:after, .clearfix:before {
   content: ' ';
   display: table;
   clear: both;
 }
 
-/* line 54, ../../sass/components/_common.scss */
+/* line 55, ../../sass/components/_common.scss */
 html, body {
   font-family: sans-serif;
   direction: ltr;
   margin: 0px;
   padding: 0px;
 }
-/* line 59, ../../sass/components/_common.scss */
+/* line 60, ../../sass/components/_common.scss */
 html.ltr, html .ltr, body.ltr, body .ltr {
   font-family: sans-serif;
 }
-/* line 62, ../../sass/components/_common.scss */
+/* line 63, ../../sass/components/_common.scss */
 html.rtl, html .rtl, body.rtl, body .rtl {
-  font-family: "Droid Arabic Kufi", sans-serif;
+  font-family: "Tahoma", sans-serif;
   direction: rtl;
 }
 
@@ -887,9 +888,9 @@ html.rtl, html .rtl, body.rtl, body .rtl {
 /* line 17, ../../sass/components/_button.scss */
 .of-btn {
   font-size: 16px;
-  height: 2.6em;
-  line-height: 2.6em;
-  padding: 0px 0.6em;
+  height: 1.8em;
+  line-height: 1.8em;
+  padding: 0px 0.5em;
   background: #225599;
   color: white;
   -webkit-transition: all 0.5s cubic-bezier(0, 0, 0, 1);
@@ -922,7 +923,7 @@ html.rtl, html .rtl, body.rtl, body .rtl {
 }
 /* line 44, ../../sass/components/_button.scss */
 .of-btn.danger:hover {
-  background: #ff906e;
+  background: #ff906f;
 }
 /* line 48, ../../sass/components/_button.scss */
 .of-btn.danger:active, .of-btn.danger.active {
@@ -950,7 +951,7 @@ html.rtl, html .rtl, body.rtl, body .rtl {
 }
 /* line 48, ../../sass/components/_button.scss */
 .of-btn.info:active, .of-btn.info.active {
-  background: #ff7f00;
+  background: #ff8000;
 }
 /* line 56, ../../sass/components/_button.scss */
 .of-btn.xs {
@@ -978,10 +979,10 @@ html.rtl, html .rtl, body.rtl, body .rtl {
 
 /* line 17, ../../sass/components/_input.scss */
 .of-text-field {
-  line-height: 2.6em;
-  height: 2.6em;
+  line-height: 1.8em;
+  height: 1.8em;
   font-size: 16px;
-  padding: 0px 0.6em;
+  padding: 0px 0.5em;
   border: 1px solid #4a86d7;
 }
 /* line 26, ../../sass/components/_input.scss */
@@ -1199,7 +1200,93 @@ html.rtl, html .rtl, body.rtl, body .rtl {
   background-color: #FF9933;
 }
 
-/* line 21, ../../sass/screen.scss */
+/* line 7, ../../sass/components/_dropdown.scss */
+.of-dropdown {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  height: 1.8em;
+  line-height: 1.8em;
+  border: 1px solid #225599;
+  width: 100%;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  outline: none;
+}
+/* line 23, ../../sass/components/_dropdown.scss */
+.of-dropdown .of-label {
+  display: inline-block;
+  color: black;
+  line-height: 1.8em;
+  height: 1.8em;
+  width: 100%;
+  padding: 0px 5px;
+}
+/* line 32, ../../sass/components/_dropdown.scss */
+.of-dropdown .of-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  border: 1px solid #225599;
+  border-top: white;
+  margin: 0px -1px;
+  -webkit-transition: height 0.3s cubic-bezier(0, 0, 0, 0.5);
+  -o-transition: height 0.3s cubic-bezier(0, 0, 0, 0.5);
+  transition: height 0.3s cubic-bezier(0, 0, 0, 0.5);
+  visibility: collapse;
+  height: 0px;
+  overflow: auto;
+}
+/* line 51, ../../sass/components/_dropdown.scss */
+.of-dropdown .of-menu-item {
+  line-height: 1.8em;
+  padding: 0px 5px;
+}
+/* line 59, ../../sass/components/_dropdown.scss */
+.of-dropdown:active .of-menu, .of-dropdown.active .of-menu, .of-dropdown:focus .of-menu {
+  visibility: visible;
+  height: 150px;
+}
+/* line 67, ../../sass/components/_dropdown.scss */
+.of-dropdown.xs {
+  font-size: 11.2px;
+}
+/* line 67, ../../sass/components/_dropdown.scss */
+.of-dropdown.sm {
+  font-size: 14px;
+}
+/* line 67, ../../sass/components/_dropdown.scss */
+.of-dropdown.md {
+  font-size: 22.4px;
+}
+/* line 67, ../../sass/components/_dropdown.scss */
+.of-dropdown.lg {
+  font-size: 25.2px;
+}
+/* line 74, ../../sass/components/_dropdown.scss */
+.of-dropdown.primary .of-inner-wrapper {
+  background-color: #225599;
+}
+/* line 74, ../../sass/components/_dropdown.scss */
+.of-dropdown.danger .of-inner-wrapper {
+  background-color: #FF5522;
+}
+/* line 74, ../../sass/components/_dropdown.scss */
+.of-dropdown.success .of-inner-wrapper {
+  background-color: #44CC66;
+}
+/* line 74, ../../sass/components/_dropdown.scss */
+.of-dropdown.info .of-inner-wrapper {
+  background-color: #FF9933;
+}
+
+/* line 24, ../../sass/screen.scss */
 .doc {
   left: 50%;
   margin-left: -50;

@@ -10,7 +10,10 @@
 @import "components/input";
 @import "components/switch";
 @import "components/progressbar";
+@import "components/dropdown";
 @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@import url(https://fonts.googleapis.com/css?family=Lateef&subset=arabic,latin);
+// <link href='' rel='stylesheet' type='text/css'>
 
 $document-direction:left !default;
 @mixin CenterHorizontally($width) {

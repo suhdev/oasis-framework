@@ -1,0 +1,78 @@
+$dropdown-max-height:150px !default;
+$dropdown-border-radius:0px !default;
+$dropdown-border:1px solid $base-color-primary !default;
+$dropdown-fg-color:black !default;
+$dropdown-menu-bg-color:white !default;
+
+.of-dropdown{
+    @extend %box;
+    @extend %no-text-select;
+    display:inline-block;
+    position:relative;
+    font-size:$base-font-size;
+    height:$base-control-height;
+    line-height:$base-control-height;
+    border:$dropdown-border;
+    width:100%;
+    -webkit-border-radius: $dropdown-border-radius/2;
+	-moz-border-radius: $dropdown-border-radius/2;
+	-ms-border-radius: $dropdown-border-radius/2;
+	-o-border-radius: $dropdown-border-radius/2;
+	border-radius: $dropdown-border-radius/2;
+    outline:none;
+    .of-label{
+        @extend %box;
+        display:inline-block;
+        color:$dropdown-fg-color;
+        line-height:$base-control-height;
+        height:$base-control-height;
+        width:100%;
+        padding:0px 5px;
+    }
+    .of-menu{
+        @extend %box;
+        display:block;
+        position:absolute;
+        top:100%;
+        left:0px;
+        right:0px;
+        background-color: $dropdown-menu-bg-color;
+        border:$dropdown-border;
+        border-top:white;
+        margin:0px -1px;
+        -webkit-transition: height 0.3s cubic-bezier(0,0,0,0.5);
+        -o-transition: height 0.3s cubic-bezier(0,0,0,0.5);
+        transition: height 0.3s cubic-bezier(0,0,0,0.5);
+        visibility:collapse;
+        height:0px;
+        overflow:auto;
+    }
+
+    .of-menu-item{
+        @extend %box;
+        line-height:$base-control-height;
+        padding:0px 5px;
+    }
+
+
+    &:active,&.active,&:focus{
+        .of-menu{
+            visibility:visible;
+            height:$dropdown-max-height;
+        }
+    }
+
+    @each $type in $control-size-types {
+		$idx:index($control-size-types,$type);
+		&.#{$type} {
+			font-size:nth($control-sizes,$idx)*1.4;
+		}
+	}
+
+	@each $type in $control-types {
+		$idx:index($control-types,$type);
+		&.#{$type} .of-inner-wrapper {
+			background-color: nth($control-colors,$idx);
+		}
+	}
+}
